@@ -13,6 +13,7 @@ const LINE =
 
 // Gate from the competition rules: entry.txt must be UTF-8 text of
 // 1 to 200 characters, not only white space, a single line.
+// The gate runs before any write, so a bad line fails loudly instead of shipping a bad entry.
 const MAX_CHARS = 200;
 
 function fail(message: string): never {
